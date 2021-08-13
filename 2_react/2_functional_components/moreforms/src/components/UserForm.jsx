@@ -71,48 +71,58 @@ const UserForm = (props) => {
     }
     
     return (
-        <form class="form-horizontal" >
-            <div class="form-group">
+        <form className="form-horizontal" >
+            <div className="form-group">
                 <hr></hr>
                 <h4>Register new user:</h4>
-                <label>First name:</label>
-                <input type="text" value={ firstname } onChange={ handleFirstname }/>
-                { firstnameError ?
-                    <p>{ firstnameError }</p> :
-                    <p></p>
-                }
+                <label className="col-sm-2 control-label">First name:</label>
+                <div className="col-sm-10">
+                    <input type="text" className="form-control" value={ firstname } onChange={ handleFirstname }/>
+                    { firstnameError ?
+                        <p>{ firstnameError }</p> :
+                        <p></p>
+                    }
+                </div>
             </div>
-            <div class="form-group">
-                <label>Last name:</label>
-                <input type="text" value={ lastname } onChange={ handleLastname }/>
-                { lastnameError ?
-                    <p>{ lastnameError }</p> :
-                    <p></p>
-                }
+            <div className="form-group">
+                <label className="col-sm-2 control-label">Last name:</label>
+                <div className="col-sm-10">
+                    <input type="text" className="form-control" value={ lastname } onChange={ handleLastname }/>
+                    { lastnameError ?
+                        <p>{ lastnameError }</p> :
+                        <p></p>
+                    }
+                </div>
             </div>
-            <div class="form-group">
-                <label>Email:</label>
-                <input type="email" value={ email } onChange={ handleEmail }/>
-                { emailError ?
-                    <p>{ emailError }</p> :
-                    <p></p>
-                }
+            <div className="form-group">
+                <label className="col-sm-2 control-label">Email:</label>
+                <div className="col-sm-10">
+                    <input type="email" className="form-control" value={ email } onChange={ handleEmail }/>
+                    { emailError ?
+                        <p>{ emailError }</p> :
+                        <p></p>
+                    }
+                </div>
             </div>
-            <div class="form-group">
-                <label>Password:</label>
-                <input type="password" value={ password } onChange={ handlePassword }/>
-                { passwordError ?
-                    <p>{ passwordError }</p> :
-                    <p></p>
-                }
+            <div className="form-group">
+                <label className="col-sm-2 control-label">Password:</label>
+                <div className="col-sm-10">
+                    <input type="password" className="form-control" value={ password } onChange={ handlePassword }/>
+                    { passwordError ?
+                        <p>{ passwordError }</p> :
+                        <p></p>
+                    }
+                </div>
             </div>
-            <div class="form-group">
-                <label>Confirm password:</label>
-                <input type="password" value={ confirmPassword } onChange={ handleMatch }/>
-                { matchError ?
-                    <p>{ matchError }</p> :
-                    <p></p>
-                }
+            <div className="form-group">
+                <label className="col-sm-2 control-label">Confirm password:</label>
+                <div className="col-sm-10">
+                    <input type="password" className="form-control" value={ confirmPassword } onChange={ handleMatch }/>
+                    { matchError ?
+                        <p>{ matchError }</p> :
+                        <p></p>
+                    }
+                </div>
             </div>
             <hr></hr>
             <div><h4>Entered form fields:</h4>
