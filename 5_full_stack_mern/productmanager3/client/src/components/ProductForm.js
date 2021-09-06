@@ -21,6 +21,7 @@ const ProductForm = () => {
         setTitle("");
         setPrice(0);
         setDescription("");
+        window.location.reload();
         })
             .catch(err=>console.log(err))
     }
@@ -29,15 +30,15 @@ const ProductForm = () => {
         <form onSubmit={submitHandler}>
             <p>
                 <label>Title:</label>
-                <input type="text" onChange = {(event)=>setTitle(event.target.value)}/>
+                <input type="text" value={title} onChange = {(event)=>setTitle(event.target.value)}/>
             </p>
             <p>
                 <label>Price:</label>
-                <input type="number" step="0.01" onChange = {(event)=>setPrice(event.target.value)}/>
+                <input type="number" step="0.01" value={price} onChange = {(event)=>setPrice(event.target.value)}/>
             </p>
             <p>
                 <label>Description:</label>
-                <input type="text" onChange = {(event)=>setDescription(event.target.value)}/>
+                <input type="text" value={description} onChange = {(event)=>setDescription(event.target.value)}/>
             </p>
             <input type="submit"/>
         </form>
