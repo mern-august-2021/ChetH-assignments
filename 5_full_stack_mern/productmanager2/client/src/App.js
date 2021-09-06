@@ -8,8 +8,8 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Main path="/product/"/>
-        <Detail path="/product/:id"/>
+        <Main path="/"/>
+        <Detail path="/:id"/>
       </Router>
     </div>
   );

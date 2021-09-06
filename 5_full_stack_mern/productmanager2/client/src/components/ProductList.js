@@ -12,7 +12,7 @@ const ProductList = (props) => {
     return (
         <div>
             {props.product.map((product, idx) => {
-                return <p key={idx}><Link to={"/product/" + product._id}>{product.title}</Link></p>
+                return <p key={idx}><Link to={"/" + product._id}>{product.title}</Link></p>
             })}
         </div>
     )
